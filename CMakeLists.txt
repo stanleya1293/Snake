@@ -1,0 +1,6 @@
+project(Snake)
+add_executable(Snake snake.cpp)
+add_subdirectory(./lib/glfw-3.4)
+target_link_libraries(Snake glfw)
+find_package(OpenGL REQUIRED)
+target_link_libraries(Snake OpenGL::GL)

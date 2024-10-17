@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Snake.dir/snake.o -o Snake   -L/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src  lib/glfw-3.4/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libGL.so -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl 

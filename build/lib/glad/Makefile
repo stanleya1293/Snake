@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build/lib/glad//CMakeFiles/progress.marks
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,113 +148,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Snake
+# Convenience name for target.
+lib/glad/CMakeFiles/glad.dir/rule:
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/CMakeFiles/glad.dir/rule
+.PHONY : lib/glad/CMakeFiles/glad.dir/rule
 
-# Build rule for target.
-Snake: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake
-.PHONY : Snake
-
-# fast build rule for target.
-Snake/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/build
-.PHONY : Snake/fast
-
-#=============================================================================
-# Target rules for targets named glad
-
-# Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+# Convenience name for target.
+glad: lib/glad/CMakeFiles/glad.dir/rule
 .PHONY : glad
 
 # fast build rule for target.
 glad/fast:
-	$(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/build
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
-#=============================================================================
-# Target rules for targets named uninstall
-
-# Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/CMakeFiles/uninstall.dir/build.make lib/glfw-3.4/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
-#=============================================================================
-# Target rules for targets named glfw
-
-# Build rule for target.
-glfw: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
-.PHONY : glfw
-
-# fast build rule for target.
-glfw/fast:
-	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/glfw.dir/build.make lib/glfw-3.4/src/CMakeFiles/glfw.dir/build
-.PHONY : glfw/fast
-
-#=============================================================================
-# Target rules for targets named update_mappings
-
-# Build rule for target.
-update_mappings: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
-.PHONY : update_mappings
-
-# fast build rule for target.
-update_mappings/fast:
-	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
-.PHONY : update_mappings/fast
-
 # target to build an object file
-Renderer.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/Renderer.o
-.PHONY : Renderer.o
+src/glad.o:
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/src/glad.o
+.PHONY : src/glad.o
 
 # target to preprocess a source file
-Renderer.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/Renderer.i
-.PHONY : Renderer.i
+src/glad.i:
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/src/glad.i
+.PHONY : src/glad.i
 
 # target to generate assembly for a file
-Renderer.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/Renderer.s
-.PHONY : Renderer.s
-
-# target to build an object file
-snake.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/snake.o
-.PHONY : snake.o
-
-# target to preprocess a source file
-snake.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/snake.i
-.PHONY : snake.i
-
-# target to generate assembly for a file
-snake.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/snake.s
-.PHONY : snake.s
+src/glad.s:
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/src/glad.s
+.PHONY : src/glad.s
 
 # Help Target
 help:
@@ -268,17 +202,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... uninstall"
-	@echo "... update_mappings"
-	@echo "... Snake"
 	@echo "... glad"
-	@echo "... glfw"
-	@echo "... Renderer.o"
-	@echo "... Renderer.i"
-	@echo "... Renderer.s"
-	@echo "... snake.o"
-	@echo "... snake.i"
-	@echo "... snake.s"
+	@echo "... src/glad.o"
+	@echo "... src/glad.i"
+	@echo "... src/glad.s"
 .PHONY : help
 
 
@@ -290,6 +217,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

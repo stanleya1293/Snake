@@ -64,17 +64,35 @@ CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
 
 # The main recursive "all" target.
 all: CMakeFiles/Snake.dir/all
+all: lib/glad/all
 all: lib/glfw-3.4/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: lib/glad/preinstall
 preinstall: lib/glfw-3.4/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Snake.dir/clean
+clean: lib/glad/clean
 clean: lib/glfw-3.4/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/glad
+
+# Recursive "all" directory target.
+lib/glad/all: lib/glad/CMakeFiles/glad.dir/all
+.PHONY : lib/glad/all
+
+# Recursive "preinstall" directory target.
+lib/glad/preinstall:
+.PHONY : lib/glad/preinstall
+
+# Recursive "clean" directory target.
+lib/glad/clean: lib/glad/CMakeFiles/glad.dir/clean
+.PHONY : lib/glad/clean
 
 #=============================================================================
 # Directory level rules for directory lib/glfw-3.4
@@ -131,14 +149,15 @@ lib/glfw-3.4/src/clean: lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/clean
 
 # All Build rule for target.
 CMakeFiles/Snake.dir/all: lib/glfw-3.4/src/CMakeFiles/glfw.dir/all
+CMakeFiles/Snake.dir/all: lib/glad/CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=1,2 "Built target Snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=1,2,3 "Built target Snake"
 .PHONY : CMakeFiles/Snake.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Snake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 47
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 50
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Snake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
 .PHONY : CMakeFiles/Snake.dir/rule
@@ -151,6 +170,32 @@ Snake: CMakeFiles/Snake.dir/rule
 CMakeFiles/Snake.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/clean
 .PHONY : CMakeFiles/Snake.dir/clean
+
+#=============================================================================
+# Target rules for target lib/glad/CMakeFiles/glad.dir
+
+# All Build rule for target.
+lib/glad/CMakeFiles/glad.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=4,5 "Built target glad"
+.PHONY : lib/glad/CMakeFiles/glad.dir/all
+
+# Build rule for subdir invocation for target.
+lib/glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glad/CMakeFiles/glad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
+.PHONY : lib/glad/CMakeFiles/glad.dir/rule
+
+# Convenience name for target.
+glad: lib/glad/CMakeFiles/glad.dir/rule
+.PHONY : glad
+
+# clean rule for target.
+lib/glad/CMakeFiles/glad.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/clean
+.PHONY : lib/glad/CMakeFiles/glad.dir/clean
 
 #=============================================================================
 # Target rules for target lib/glfw-3.4/CMakeFiles/uninstall.dir
@@ -185,7 +230,7 @@ lib/glfw-3.4/CMakeFiles/uninstall.dir/clean:
 lib/glfw-3.4/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/glfw.dir/build.make lib/glfw-3.4/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/glfw.dir/build.make lib/glfw-3.4/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target glfw"
 .PHONY : lib/glfw-3.4/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -211,7 +256,7 @@ lib/glfw-3.4/src/CMakeFiles/glfw.dir/clean:
 lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=48 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=51 "Built target update_mappings"
 .PHONY : lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.

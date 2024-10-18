@@ -1,6 +1,7 @@
-CMakeFiles/Snake.dir/snake.o: \
- /home/stanleya1293/Desktop/Projects/Snake/snake.cpp \
+CMakeFiles/Snake.dir/Renderer.o: \
+ /home/stanleya1293/Desktop/Projects/Snake/Renderer.cpp \
  /usr/include/stdc-predef.h \
+ /home/stanleya1293/Desktop/Projects/Snake/Renderer.h \
  /home/stanleya1293/Desktop/Projects/Snake/includes.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -150,5 +151,4 @@ CMakeFiles/Snake.dir/snake.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/stanleya1293/Desktop/Projects/Snake/lib/glad/include/glad/glad.h \
  /home/stanleya1293/Desktop/Projects/Snake/lib/glad/include/KHR/khrplatform.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include/GLFW/glfw3.h \
- /home/stanleya1293/Desktop/Projects/Snake/Renderer.h
+ /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include/GLFW/glfw3.h

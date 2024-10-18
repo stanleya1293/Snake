@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../lib/glad/CMakeLists.txt"
   "../lib/glfw-3.4/CMake/cmake_uninstall.cmake.in"
   "../lib/glfw-3.4/CMake/glfw3.pc.in"
   "../lib/glfw-3.4/CMake/glfw3Config.cmake.in"
@@ -108,7 +109,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/FindDoxygen.cmake"
-  "/usr/share/cmake-3.22/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindPkgConfig.cmake"
@@ -140,6 +140,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw-3.4/src/glfw3Config.cmake"
   "lib/glfw-3.4/src/glfw3ConfigVersion.cmake"
   "lib/glfw-3.4/cmake_uninstall.cmake"
@@ -152,6 +153,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Snake.dir/DependInfo.cmake"
+  "lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "lib/glfw-3.4/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "lib/glfw-3.4/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"

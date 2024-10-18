@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Snake.dir/Renderer.o"
+  "CMakeFiles/Snake.dir/Renderer.o.d"
   "CMakeFiles/Snake.dir/snake.o"
   "CMakeFiles/Snake.dir/snake.o.d"
   "Snake"

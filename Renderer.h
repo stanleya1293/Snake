@@ -1,15 +1,12 @@
-
-struct t_quad {
-    float vertices[12];
-    unsigned int elements[6];
-};
-
-typedef struct t_quad Quad;
+#ifndef RENDERER_H
+#define RENDERER_H
+#include "includes.h"
 
 class Renderer {
 public:
     Renderer();
     ~Renderer();
-private:
-
+    
 };
+
+#endif

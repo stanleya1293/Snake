@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include
+CXX_INCLUDES = -I/home/stanleya1293/Desktop/Projects/Snake/lib/glad/include -I/home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include
 
 CXX_FLAGS = 
 

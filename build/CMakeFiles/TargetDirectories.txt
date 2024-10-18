@@ -5,6 +5,13 @@
 /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles/install.dir
 /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles/install/local.dir
 /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles/install/strip.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/glad.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/edit_cache.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/rebuild_cache.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/list_install_components.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/install.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/install/local.dir
+/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/install/strip.dir
 /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/CMakeFiles/uninstall.dir
 /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/CMakeFiles/edit_cache.dir
 /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/CMakeFiles/rebuild_cache.dir

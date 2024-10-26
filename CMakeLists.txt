@@ -1,5 +1,5 @@
 project(Snake)
-add_executable(Snake snake.cpp Renderer.cpp)
+add_executable(Snake snake.cpp)
 add_subdirectory(./lib/glad/)
 target_link_libraries(Snake PRIVATE glad)
 add_subdirectory(./lib/glfw-3.4)

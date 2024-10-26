@@ -1,4 +1,6 @@
-#include "includes.h"
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+
 
 int main(int argc, char* argv[]) {
     glfwInit();
@@ -6,7 +8,6 @@ int main(int argc, char* argv[]) {
     window = glfwCreateWindow(640, 480, "Snake", NULL, NULL);
     glfwMakeContextCurrent(window);
     gladLoadGL();
-    Renderer renderer;
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);

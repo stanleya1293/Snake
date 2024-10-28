@@ -57,13 +57,33 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
+CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
+CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/stanleya1293/Desktop/Projects/Snake/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles /home/voidlich/personal/Snake/build/lib/glfw-3.4//CMakeFiles/progress.marks
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles 0
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4//CMakeFiles/progress.marks
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/clean
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/preinstall
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/preinstall
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/glfw-3.4/CMakeFiles/uninstall.dir/rule:
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/CMakeFiles/uninstall.dir/rule
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw-3.4/CMakeFiles/uninstall.dir/rule
 .PHONY : lib/glfw-3.4/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -172,7 +192,7 @@ uninstall: lib/glfw-3.4/CMakeFiles/uninstall.dir/rule
 
 # fast build rule for target.
 uninstall/fast:
-	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glfw-3.4/CMakeFiles/uninstall.dir/build.make lib/glfw-3.4/CMakeFiles/uninstall.dir/build
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/glfw-3.4/CMakeFiles/uninstall.dir/build.make lib/glfw-3.4/CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
 # Help Target
@@ -186,6 +206,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... uninstall"
 .PHONY : help
@@ -199,6 +221,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

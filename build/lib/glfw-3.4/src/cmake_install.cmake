@@ -1,4 +1,4 @@
-# Install script for directory: /home/voidlich/personal/Snake/lib/glfw-3.4/src
+# Install script for directory: /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,6 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/voidlich/personal/Snake/build/lib/glfw-3.4/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src/libglfw3.a")
 endif()
 

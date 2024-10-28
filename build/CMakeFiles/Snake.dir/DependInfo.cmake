@@ -8,13 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/voidlich/personal/Snake/snake.c" "CMakeFiles/Snake.dir/snake.o" "gcc" "CMakeFiles/Snake.dir/snake.o.d"
+  "/home/stanleya1293/Desktop/Projects/Snake/snake.c" "CMakeFiles/Snake.dir/snake.o" "gcc" "CMakeFiles/Snake.dir/snake.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/voidlich/personal/Snake/build/lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
-  "/home/voidlich/personal/Snake/build/lib/glfw-3.4/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/CMakeFiles/cglm.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -1,4 +1,4 @@
-# Install script for directory: /home/voidlich/personal/Snake/lib/glfw-3.4/docs
+# Install script for directory: /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

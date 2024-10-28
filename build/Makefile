@@ -57,13 +57,33 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
+CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
+CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/stanleya1293/Desktop/Projects/Snake/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles /home/voidlich/personal/Snake/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -226,6 +246,19 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+#=============================================================================
+# Target rules for targets named cglm
+
+# Build rule for target.
+cglm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cglm
+.PHONY : cglm
+
+# fast build rule for target.
+cglm/fast:
+	$(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/build
+.PHONY : cglm/fast
+
 # target to build an object file
 snake.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/snake.o
@@ -252,10 +285,13 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... Snake"
+	@echo "... cglm"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... snake.o"

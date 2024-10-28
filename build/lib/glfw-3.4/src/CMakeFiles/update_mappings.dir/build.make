@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
+CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
+CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/progress.make
 
 lib/glfw-3.4/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/voidlich/personal/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /home/voidlich/personal/Snake/lib/glfw-3.4/src && /usr/bin/cmake -P /home/voidlich/personal/Snake/lib/glfw-3.4/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/src && /usr/bin/cmake -P /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: lib/glfw-3.4/src/CMakeFiles/update_mappings
 update_mappings: lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build.make
@@ -79,10 +79,10 @@ lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
 
 lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/clean:
-	cd /home/voidlich/personal/Snake/build/lib/glfw-3.4/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/clean
 
 lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/depend:
-	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/voidlich/personal/Snake /home/voidlich/personal/Snake/lib/glfw-3.4/src /home/voidlich/personal/Snake/build /home/voidlich/personal/Snake/build/lib/glfw-3.4/src /home/voidlich/personal/Snake/build/lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stanleya1293/Desktop/Projects/Snake /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/src /home/stanleya1293/Desktop/Projects/Snake/build /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/depend
 

@@ -45,13 +45,13 @@ unset(_expectedTargets)
 add_library(cglm::cglm SHARED IMPORTED)
 
 set_target_properties(cglm::cglm PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/voidlich/personal/Snake/lib/cglm/include"
 )
 
 # Import target "cglm::cglm" for configuration ""
 set_property(TARGET cglm::cglm APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(cglm::cglm PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/libcglm.so.0.9.5"
+  IMPORTED_LOCATION_NOCONFIG "/home/voidlich/personal/Snake/build/lib/cglm/libcglm.so.0.9.5"
   IMPORTED_SONAME_NOCONFIG "libcglm.so.0"
   )
 

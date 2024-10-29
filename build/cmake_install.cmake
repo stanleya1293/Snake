@@ -1,4 +1,4 @@
-# Install script for directory: /home/stanleya1293/Desktop/Projects/Snake
+# Install script for directory: /home/voidlich/personal/Snake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/stanleya1293/Desktop/Projects/Snake/build/lib/glad/cmake_install.cmake")
-  include("/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/cmake_install.cmake")
-  include("/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/cmake_install.cmake")
+  include("/home/voidlich/personal/Snake/build/lib/glad/cmake_install.cmake")
+  include("/home/voidlich/personal/Snake/build/lib/glfw-3.4/cmake_install.cmake")
+  include("/home/voidlich/personal/Snake/build/lib/cglm/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/stanleya1293/Desktop/Projects/Snake/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/voidlich/personal/Snake/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

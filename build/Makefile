@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
+CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
+CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/stanleya1293/Desktop/Projects/Snake/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/voidlich/personal/Snake/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles /home/voidlich/personal/Snake/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -260,6 +260,21 @@ cglm/fast:
 .PHONY : cglm/fast
 
 # target to build an object file
+renderer.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/renderer.o
+.PHONY : renderer.o
+
+# target to preprocess a source file
+renderer.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/renderer.i
+.PHONY : renderer.i
+
+# target to generate assembly for a file
+renderer.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/renderer.s
+.PHONY : renderer.s
+
+# target to build an object file
 snake.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/snake.o
 .PHONY : snake.o
@@ -294,6 +309,9 @@ help:
 	@echo "... cglm"
 	@echo "... glad"
 	@echo "... glfw"
+	@echo "... renderer.o"
+	@echo "... renderer.i"
+	@echo "... renderer.s"
 	@echo "... snake.o"
 	@echo "... snake.i"
 	@echo "... snake.s"

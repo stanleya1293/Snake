@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/install_manifest.txt\"")
+if (NOT EXISTS "/home/voidlich/personal/Snake/build/lib/glfw-3.4/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/home/voidlich/personal/Snake/build/lib/glfw-3.4/install_manifest.txt\"")
 endif()
 
-file(READ "/home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/install_manifest.txt" files)
+file(READ "/home/voidlich/personal/Snake/build/lib/glfw-3.4/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

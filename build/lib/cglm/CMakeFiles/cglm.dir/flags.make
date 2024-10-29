@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
 
-C_INCLUDES = -I/home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include -I/home/stanleya1293/Desktop/Projects/Snake/lib/cglm/src
+C_INCLUDES = -I/home/voidlich/personal/Snake/lib/cglm/include -I/home/voidlich/personal/Snake/lib/cglm/src
 
 C_FLAGS = -fPIC -Wall -O3 -std=gnu11
 

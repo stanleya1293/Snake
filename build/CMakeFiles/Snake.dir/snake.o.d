@@ -1,8 +1,7 @@
-CMakeFiles/Snake.dir/snake.o: \
- /home/stanleya1293/Desktop/Projects/Snake/snake.c \
+CMakeFiles/Snake.dir/snake.o: /home/voidlich/personal/Snake/snake.c \
  /usr/include/stdc-predef.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/glad/include/glad/glad.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/glad/include/KHR/khrplatform.h \
+ /home/voidlich/personal/Snake/lib/glad/include/glad/glad.h \
+ /home/voidlich/personal/Snake/lib/glad/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -18,7 +17,7 @@ CMakeFiles/Snake.dir/snake.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include/GLFW/glfw3.h \
+ /home/voidlich/personal/Snake/lib/glfw-3.4/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -30,8 +29,8 @@ CMakeFiles/Snake.dir/snake.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/cglm.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/common.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/cglm.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/common.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
@@ -65,73 +64,73 @@ CMakeFiles/Snake.dir/snake.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/types.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/types.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdalign.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/intrin.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/intrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/x86.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/intrin.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/util.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec2-ext.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec4-ext.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/vec3-ext.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/ivec2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/ivec3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/ivec4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/mat4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/../../common.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/../intrin.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/x86.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/intrin.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/util.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec2-ext.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec4-ext.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/vec3-ext.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/ivec2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/ivec3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/ivec4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/mat4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/../../common.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/../intrin.h \
  /usr/include/assert.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat4x2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat4x3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/mat3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat3x2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat3x4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/mat2.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat2x3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/mat2x4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/affine.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/affine-mat.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/affine.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/affine-pre.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/affine-post.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/cam.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/plane.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/persp.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/../common.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/../plane.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/../mat4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/ortho_rh_no.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/persp_rh_no.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/persp.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/view_rh_no.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/view_rh.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/frustum.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/quat.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/simd/sse2/quat.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/euler.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/handed/euler_to_quat_rh.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/handed/../common.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/aabb2d.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/box.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/color.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/io.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/project.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/project_no.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/../vec3.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/clipspace/../vec4.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/sphere.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/ease.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/curve.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/bezier.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/ray.h \
- /home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm/affine2d.h
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat4x2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat4x3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/mat3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat3x2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat3x4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/mat2.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat2x3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/mat2x4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/affine.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/affine-mat.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/affine.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/affine-pre.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/affine-post.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/cam.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/plane.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/persp.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/../common.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/../plane.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/../mat4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/ortho_rh_no.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/persp_rh_no.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/persp.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/view_rh_no.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/view_rh.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/frustum.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/quat.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/simd/sse2/quat.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/euler.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/handed/euler_to_quat_rh.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/handed/../common.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/aabb2d.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/box.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/color.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/io.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/project.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/project_no.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/../vec3.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/clipspace/../vec4.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/sphere.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/ease.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/curve.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/bezier.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/ray.h \
+ /home/voidlich/personal/Snake/lib/cglm/include/cglm/affine2d.h

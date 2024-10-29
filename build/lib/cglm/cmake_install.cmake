@@ -1,4 +1,4 @@
-# Install script for directory: /home/stanleya1293/Desktop/Projects/Snake/lib/cglm
+# Install script for directory: /home/voidlich/personal/Snake/lib/cglm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -55,8 +55,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/libcglm.so.0.9.5"
-    "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/libcglm.so.0"
+    "/home/voidlich/personal/Snake/build/lib/cglm/libcglm.so.0.9.5"
+    "/home/voidlich/personal/Snake/build/lib/cglm/libcglm.so.0"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcglm.so.0.9.5"
@@ -78,7 +78,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcglm.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/libcglm.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/voidlich/personal/Snake/build/lib/cglm/libcglm.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcglm.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcglm.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -88,14 +88,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include/cglm" REGEX "/\\.[^/]*$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/voidlich/personal/Snake/lib/cglm/include/cglm" REGEX "/\\.[^/]*$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm/cglmConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm/cglmConfig.cmake"
-         "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig.cmake")
+         "/home/voidlich/personal/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm/cglmConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -104,13 +104,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm" TYPE FILE FILES "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm" TYPE FILE FILES "/home/voidlich/personal/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm" TYPE FILE FILES "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cglm" TYPE FILE FILES "/home/voidlich/personal/Snake/build/lib/cglm/CMakeFiles/Export/lib/cmake/cglm/cglmConfig-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm/cglm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/voidlich/personal/Snake/build/lib/cglm/cglm.pc")
 endif()
 

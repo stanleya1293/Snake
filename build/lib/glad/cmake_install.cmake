@@ -1,4 +1,4 @@
-# Install script for directory: /home/stanleya1293/Desktop/Projects/Snake/lib/glad
+# Install script for directory: /home/voidlich/personal/Snake/lib/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

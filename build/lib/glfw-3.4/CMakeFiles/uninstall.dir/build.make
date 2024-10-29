@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
+CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
+CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include lib/glfw-3.4/CMakeFiles/uninstall.dir/compiler_depend.make
 include lib/glfw-3.4/CMakeFiles/uninstall.dir/progress.make
 
 lib/glfw-3.4/CMakeFiles/uninstall:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4 && /usr/bin/cmake -P /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/cmake_uninstall.cmake
+	cd /home/voidlich/personal/Snake/build/lib/glfw-3.4 && /usr/bin/cmake -P /home/voidlich/personal/Snake/build/lib/glfw-3.4/cmake_uninstall.cmake
 
 uninstall: lib/glfw-3.4/CMakeFiles/uninstall
 uninstall: lib/glfw-3.4/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ lib/glfw-3.4/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : lib/glfw-3.4/CMakeFiles/uninstall.dir/build
 
 lib/glfw-3.4/CMakeFiles/uninstall.dir/clean:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/voidlich/personal/Snake/build/lib/glfw-3.4 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : lib/glfw-3.4/CMakeFiles/uninstall.dir/clean
 
 lib/glfw-3.4/CMakeFiles/uninstall.dir/depend:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stanleya1293/Desktop/Projects/Snake /home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4 /home/stanleya1293/Desktop/Projects/Snake/build /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4 /home/stanleya1293/Desktop/Projects/Snake/build/lib/glfw-3.4/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/voidlich/personal/Snake /home/voidlich/personal/Snake/lib/glfw-3.4 /home/voidlich/personal/Snake/build /home/voidlich/personal/Snake/build/lib/glfw-3.4 /home/voidlich/personal/Snake/build/lib/glfw-3.4/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/glfw-3.4/CMakeFiles/uninstall.dir/depend
 

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/stanleya1293/Desktop/Projects/Snake/lib/glad/include -I/home/stanleya1293/Desktop/Projects/Snake/lib/glfw-3.4/include -I/home/stanleya1293/Desktop/Projects/Snake/lib/cglm/include
+C_INCLUDES = -I/home/voidlich/personal/Snake/lib/glad/include -I/home/voidlich/personal/Snake/lib/glfw-3.4/include -I/home/voidlich/personal/Snake/lib/cglm/include
 
 C_FLAGS = 
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stanleya1293/Desktop/Projects/Snake
+CMAKE_SOURCE_DIR = /home/voidlich/personal/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
+CMAKE_BINARY_DIR = /home/voidlich/personal/Snake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/stanleya1293/Desktop/Projects/Snake/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/voidlich/personal/Snake/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/stanleya1293/Desktop/Projects/Snake/build/CPackSourceConfig.cmake
+	cd /home/voidlich/personal/Snake/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/voidlich/personal/Snake/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles /home/stanleya1293/Desktop/Projects/Snake/build/lib/cglm//CMakeFiles/progress.marks
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stanleya1293/Desktop/Projects/Snake/build/CMakeFiles 0
+	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles /home/voidlich/personal/Snake/build/lib/cglm//CMakeFiles/progress.marks
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/voidlich/personal/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/clean
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/preinstall
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/preinstall
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/cglm/CMakeFiles/cglm.dir/rule:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/CMakeFiles/cglm.dir/rule
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cglm/CMakeFiles/cglm.dir/rule
 .PHONY : lib/cglm/CMakeFiles/cglm.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ cglm: lib/cglm/CMakeFiles/cglm.dir/rule
 
 # fast build rule for target.
 cglm/fast:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/build
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/build
 .PHONY : cglm/fast
 
 src/affine.o: src/affine.c.o
@@ -200,7 +200,7 @@ src/affine.o: src/affine.c.o
 
 # target to build an object file
 src/affine.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.o
 .PHONY : src/affine.c.o
 
 src/affine.i: src/affine.c.i
@@ -208,7 +208,7 @@ src/affine.i: src/affine.c.i
 
 # target to preprocess a source file
 src/affine.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.i
 .PHONY : src/affine.c.i
 
 src/affine.s: src/affine.c.s
@@ -216,7 +216,7 @@ src/affine.s: src/affine.c.s
 
 # target to generate assembly for a file
 src/affine.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine.c.s
 .PHONY : src/affine.c.s
 
 src/affine2d.o: src/affine2d.c.o
@@ -224,7 +224,7 @@ src/affine2d.o: src/affine2d.c.o
 
 # target to build an object file
 src/affine2d.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.o
 .PHONY : src/affine2d.c.o
 
 src/affine2d.i: src/affine2d.c.i
@@ -232,7 +232,7 @@ src/affine2d.i: src/affine2d.c.i
 
 # target to preprocess a source file
 src/affine2d.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.i
 .PHONY : src/affine2d.c.i
 
 src/affine2d.s: src/affine2d.c.s
@@ -240,7 +240,7 @@ src/affine2d.s: src/affine2d.c.s
 
 # target to generate assembly for a file
 src/affine2d.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/affine2d.c.s
 .PHONY : src/affine2d.c.s
 
 src/bezier.o: src/bezier.c.o
@@ -248,7 +248,7 @@ src/bezier.o: src/bezier.c.o
 
 # target to build an object file
 src/bezier.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.o
 .PHONY : src/bezier.c.o
 
 src/bezier.i: src/bezier.c.i
@@ -256,7 +256,7 @@ src/bezier.i: src/bezier.c.i
 
 # target to preprocess a source file
 src/bezier.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.i
 .PHONY : src/bezier.c.i
 
 src/bezier.s: src/bezier.c.s
@@ -264,7 +264,7 @@ src/bezier.s: src/bezier.c.s
 
 # target to generate assembly for a file
 src/bezier.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/bezier.c.s
 .PHONY : src/bezier.c.s
 
 src/box.o: src/box.c.o
@@ -272,7 +272,7 @@ src/box.o: src/box.c.o
 
 # target to build an object file
 src/box.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.o
 .PHONY : src/box.c.o
 
 src/box.i: src/box.c.i
@@ -280,7 +280,7 @@ src/box.i: src/box.c.i
 
 # target to preprocess a source file
 src/box.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.i
 .PHONY : src/box.c.i
 
 src/box.s: src/box.c.s
@@ -288,7 +288,7 @@ src/box.s: src/box.c.s
 
 # target to generate assembly for a file
 src/box.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/box.c.s
 .PHONY : src/box.c.s
 
 src/cam.o: src/cam.c.o
@@ -296,7 +296,7 @@ src/cam.o: src/cam.c.o
 
 # target to build an object file
 src/cam.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.o
 .PHONY : src/cam.c.o
 
 src/cam.i: src/cam.c.i
@@ -304,7 +304,7 @@ src/cam.i: src/cam.c.i
 
 # target to preprocess a source file
 src/cam.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.i
 .PHONY : src/cam.c.i
 
 src/cam.s: src/cam.c.s
@@ -312,7 +312,7 @@ src/cam.s: src/cam.c.s
 
 # target to generate assembly for a file
 src/cam.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/cam.c.s
 .PHONY : src/cam.c.s
 
 src/clipspace/ortho_lh_no.o: src/clipspace/ortho_lh_no.c.o
@@ -320,7 +320,7 @@ src/clipspace/ortho_lh_no.o: src/clipspace/ortho_lh_no.c.o
 
 # target to build an object file
 src/clipspace/ortho_lh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.o
 .PHONY : src/clipspace/ortho_lh_no.c.o
 
 src/clipspace/ortho_lh_no.i: src/clipspace/ortho_lh_no.c.i
@@ -328,7 +328,7 @@ src/clipspace/ortho_lh_no.i: src/clipspace/ortho_lh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/ortho_lh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.i
 .PHONY : src/clipspace/ortho_lh_no.c.i
 
 src/clipspace/ortho_lh_no.s: src/clipspace/ortho_lh_no.c.s
@@ -336,7 +336,7 @@ src/clipspace/ortho_lh_no.s: src/clipspace/ortho_lh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/ortho_lh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.s
 .PHONY : src/clipspace/ortho_lh_no.c.s
 
 src/clipspace/ortho_lh_zo.o: src/clipspace/ortho_lh_zo.c.o
@@ -344,7 +344,7 @@ src/clipspace/ortho_lh_zo.o: src/clipspace/ortho_lh_zo.c.o
 
 # target to build an object file
 src/clipspace/ortho_lh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.o
 .PHONY : src/clipspace/ortho_lh_zo.c.o
 
 src/clipspace/ortho_lh_zo.i: src/clipspace/ortho_lh_zo.c.i
@@ -352,7 +352,7 @@ src/clipspace/ortho_lh_zo.i: src/clipspace/ortho_lh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/ortho_lh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.i
 .PHONY : src/clipspace/ortho_lh_zo.c.i
 
 src/clipspace/ortho_lh_zo.s: src/clipspace/ortho_lh_zo.c.s
@@ -360,7 +360,7 @@ src/clipspace/ortho_lh_zo.s: src/clipspace/ortho_lh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/ortho_lh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.s
 .PHONY : src/clipspace/ortho_lh_zo.c.s
 
 src/clipspace/ortho_rh_no.o: src/clipspace/ortho_rh_no.c.o
@@ -368,7 +368,7 @@ src/clipspace/ortho_rh_no.o: src/clipspace/ortho_rh_no.c.o
 
 # target to build an object file
 src/clipspace/ortho_rh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.o
 .PHONY : src/clipspace/ortho_rh_no.c.o
 
 src/clipspace/ortho_rh_no.i: src/clipspace/ortho_rh_no.c.i
@@ -376,7 +376,7 @@ src/clipspace/ortho_rh_no.i: src/clipspace/ortho_rh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/ortho_rh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.i
 .PHONY : src/clipspace/ortho_rh_no.c.i
 
 src/clipspace/ortho_rh_no.s: src/clipspace/ortho_rh_no.c.s
@@ -384,7 +384,7 @@ src/clipspace/ortho_rh_no.s: src/clipspace/ortho_rh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/ortho_rh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.s
 .PHONY : src/clipspace/ortho_rh_no.c.s
 
 src/clipspace/ortho_rh_zo.o: src/clipspace/ortho_rh_zo.c.o
@@ -392,7 +392,7 @@ src/clipspace/ortho_rh_zo.o: src/clipspace/ortho_rh_zo.c.o
 
 # target to build an object file
 src/clipspace/ortho_rh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.o
 .PHONY : src/clipspace/ortho_rh_zo.c.o
 
 src/clipspace/ortho_rh_zo.i: src/clipspace/ortho_rh_zo.c.i
@@ -400,7 +400,7 @@ src/clipspace/ortho_rh_zo.i: src/clipspace/ortho_rh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/ortho_rh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.i
 .PHONY : src/clipspace/ortho_rh_zo.c.i
 
 src/clipspace/ortho_rh_zo.s: src/clipspace/ortho_rh_zo.c.s
@@ -408,7 +408,7 @@ src/clipspace/ortho_rh_zo.s: src/clipspace/ortho_rh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/ortho_rh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.s
 .PHONY : src/clipspace/ortho_rh_zo.c.s
 
 src/clipspace/persp_lh_no.o: src/clipspace/persp_lh_no.c.o
@@ -416,7 +416,7 @@ src/clipspace/persp_lh_no.o: src/clipspace/persp_lh_no.c.o
 
 # target to build an object file
 src/clipspace/persp_lh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.o
 .PHONY : src/clipspace/persp_lh_no.c.o
 
 src/clipspace/persp_lh_no.i: src/clipspace/persp_lh_no.c.i
@@ -424,7 +424,7 @@ src/clipspace/persp_lh_no.i: src/clipspace/persp_lh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/persp_lh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.i
 .PHONY : src/clipspace/persp_lh_no.c.i
 
 src/clipspace/persp_lh_no.s: src/clipspace/persp_lh_no.c.s
@@ -432,7 +432,7 @@ src/clipspace/persp_lh_no.s: src/clipspace/persp_lh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/persp_lh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.s
 .PHONY : src/clipspace/persp_lh_no.c.s
 
 src/clipspace/persp_lh_zo.o: src/clipspace/persp_lh_zo.c.o
@@ -440,7 +440,7 @@ src/clipspace/persp_lh_zo.o: src/clipspace/persp_lh_zo.c.o
 
 # target to build an object file
 src/clipspace/persp_lh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.o
 .PHONY : src/clipspace/persp_lh_zo.c.o
 
 src/clipspace/persp_lh_zo.i: src/clipspace/persp_lh_zo.c.i
@@ -448,7 +448,7 @@ src/clipspace/persp_lh_zo.i: src/clipspace/persp_lh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/persp_lh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.i
 .PHONY : src/clipspace/persp_lh_zo.c.i
 
 src/clipspace/persp_lh_zo.s: src/clipspace/persp_lh_zo.c.s
@@ -456,7 +456,7 @@ src/clipspace/persp_lh_zo.s: src/clipspace/persp_lh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/persp_lh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.s
 .PHONY : src/clipspace/persp_lh_zo.c.s
 
 src/clipspace/persp_rh_no.o: src/clipspace/persp_rh_no.c.o
@@ -464,7 +464,7 @@ src/clipspace/persp_rh_no.o: src/clipspace/persp_rh_no.c.o
 
 # target to build an object file
 src/clipspace/persp_rh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.o
 .PHONY : src/clipspace/persp_rh_no.c.o
 
 src/clipspace/persp_rh_no.i: src/clipspace/persp_rh_no.c.i
@@ -472,7 +472,7 @@ src/clipspace/persp_rh_no.i: src/clipspace/persp_rh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/persp_rh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.i
 .PHONY : src/clipspace/persp_rh_no.c.i
 
 src/clipspace/persp_rh_no.s: src/clipspace/persp_rh_no.c.s
@@ -480,7 +480,7 @@ src/clipspace/persp_rh_no.s: src/clipspace/persp_rh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/persp_rh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.s
 .PHONY : src/clipspace/persp_rh_no.c.s
 
 src/clipspace/persp_rh_zo.o: src/clipspace/persp_rh_zo.c.o
@@ -488,7 +488,7 @@ src/clipspace/persp_rh_zo.o: src/clipspace/persp_rh_zo.c.o
 
 # target to build an object file
 src/clipspace/persp_rh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.o
 .PHONY : src/clipspace/persp_rh_zo.c.o
 
 src/clipspace/persp_rh_zo.i: src/clipspace/persp_rh_zo.c.i
@@ -496,7 +496,7 @@ src/clipspace/persp_rh_zo.i: src/clipspace/persp_rh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/persp_rh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.i
 .PHONY : src/clipspace/persp_rh_zo.c.i
 
 src/clipspace/persp_rh_zo.s: src/clipspace/persp_rh_zo.c.s
@@ -504,7 +504,7 @@ src/clipspace/persp_rh_zo.s: src/clipspace/persp_rh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/persp_rh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.s
 .PHONY : src/clipspace/persp_rh_zo.c.s
 
 src/clipspace/project_no.o: src/clipspace/project_no.c.o
@@ -512,7 +512,7 @@ src/clipspace/project_no.o: src/clipspace/project_no.c.o
 
 # target to build an object file
 src/clipspace/project_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.o
 .PHONY : src/clipspace/project_no.c.o
 
 src/clipspace/project_no.i: src/clipspace/project_no.c.i
@@ -520,7 +520,7 @@ src/clipspace/project_no.i: src/clipspace/project_no.c.i
 
 # target to preprocess a source file
 src/clipspace/project_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.i
 .PHONY : src/clipspace/project_no.c.i
 
 src/clipspace/project_no.s: src/clipspace/project_no.c.s
@@ -528,7 +528,7 @@ src/clipspace/project_no.s: src/clipspace/project_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/project_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.s
 .PHONY : src/clipspace/project_no.c.s
 
 src/clipspace/project_zo.o: src/clipspace/project_zo.c.o
@@ -536,7 +536,7 @@ src/clipspace/project_zo.o: src/clipspace/project_zo.c.o
 
 # target to build an object file
 src/clipspace/project_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.o
 .PHONY : src/clipspace/project_zo.c.o
 
 src/clipspace/project_zo.i: src/clipspace/project_zo.c.i
@@ -544,7 +544,7 @@ src/clipspace/project_zo.i: src/clipspace/project_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/project_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.i
 .PHONY : src/clipspace/project_zo.c.i
 
 src/clipspace/project_zo.s: src/clipspace/project_zo.c.s
@@ -552,7 +552,7 @@ src/clipspace/project_zo.s: src/clipspace/project_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/project_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.s
 .PHONY : src/clipspace/project_zo.c.s
 
 src/clipspace/view_lh_no.o: src/clipspace/view_lh_no.c.o
@@ -560,7 +560,7 @@ src/clipspace/view_lh_no.o: src/clipspace/view_lh_no.c.o
 
 # target to build an object file
 src/clipspace/view_lh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.o
 .PHONY : src/clipspace/view_lh_no.c.o
 
 src/clipspace/view_lh_no.i: src/clipspace/view_lh_no.c.i
@@ -568,7 +568,7 @@ src/clipspace/view_lh_no.i: src/clipspace/view_lh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/view_lh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.i
 .PHONY : src/clipspace/view_lh_no.c.i
 
 src/clipspace/view_lh_no.s: src/clipspace/view_lh_no.c.s
@@ -576,7 +576,7 @@ src/clipspace/view_lh_no.s: src/clipspace/view_lh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/view_lh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.s
 .PHONY : src/clipspace/view_lh_no.c.s
 
 src/clipspace/view_lh_zo.o: src/clipspace/view_lh_zo.c.o
@@ -584,7 +584,7 @@ src/clipspace/view_lh_zo.o: src/clipspace/view_lh_zo.c.o
 
 # target to build an object file
 src/clipspace/view_lh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.o
 .PHONY : src/clipspace/view_lh_zo.c.o
 
 src/clipspace/view_lh_zo.i: src/clipspace/view_lh_zo.c.i
@@ -592,7 +592,7 @@ src/clipspace/view_lh_zo.i: src/clipspace/view_lh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/view_lh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.i
 .PHONY : src/clipspace/view_lh_zo.c.i
 
 src/clipspace/view_lh_zo.s: src/clipspace/view_lh_zo.c.s
@@ -600,7 +600,7 @@ src/clipspace/view_lh_zo.s: src/clipspace/view_lh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/view_lh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.s
 .PHONY : src/clipspace/view_lh_zo.c.s
 
 src/clipspace/view_rh_no.o: src/clipspace/view_rh_no.c.o
@@ -608,7 +608,7 @@ src/clipspace/view_rh_no.o: src/clipspace/view_rh_no.c.o
 
 # target to build an object file
 src/clipspace/view_rh_no.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.o
 .PHONY : src/clipspace/view_rh_no.c.o
 
 src/clipspace/view_rh_no.i: src/clipspace/view_rh_no.c.i
@@ -616,7 +616,7 @@ src/clipspace/view_rh_no.i: src/clipspace/view_rh_no.c.i
 
 # target to preprocess a source file
 src/clipspace/view_rh_no.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.i
 .PHONY : src/clipspace/view_rh_no.c.i
 
 src/clipspace/view_rh_no.s: src/clipspace/view_rh_no.c.s
@@ -624,7 +624,7 @@ src/clipspace/view_rh_no.s: src/clipspace/view_rh_no.c.s
 
 # target to generate assembly for a file
 src/clipspace/view_rh_no.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.s
 .PHONY : src/clipspace/view_rh_no.c.s
 
 src/clipspace/view_rh_zo.o: src/clipspace/view_rh_zo.c.o
@@ -632,7 +632,7 @@ src/clipspace/view_rh_zo.o: src/clipspace/view_rh_zo.c.o
 
 # target to build an object file
 src/clipspace/view_rh_zo.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.o
 .PHONY : src/clipspace/view_rh_zo.c.o
 
 src/clipspace/view_rh_zo.i: src/clipspace/view_rh_zo.c.i
@@ -640,7 +640,7 @@ src/clipspace/view_rh_zo.i: src/clipspace/view_rh_zo.c.i
 
 # target to preprocess a source file
 src/clipspace/view_rh_zo.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.i
 .PHONY : src/clipspace/view_rh_zo.c.i
 
 src/clipspace/view_rh_zo.s: src/clipspace/view_rh_zo.c.s
@@ -648,7 +648,7 @@ src/clipspace/view_rh_zo.s: src/clipspace/view_rh_zo.c.s
 
 # target to generate assembly for a file
 src/clipspace/view_rh_zo.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.s
 .PHONY : src/clipspace/view_rh_zo.c.s
 
 src/curve.o: src/curve.c.o
@@ -656,7 +656,7 @@ src/curve.o: src/curve.c.o
 
 # target to build an object file
 src/curve.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.o
 .PHONY : src/curve.c.o
 
 src/curve.i: src/curve.c.i
@@ -664,7 +664,7 @@ src/curve.i: src/curve.c.i
 
 # target to preprocess a source file
 src/curve.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.i
 .PHONY : src/curve.c.i
 
 src/curve.s: src/curve.c.s
@@ -672,7 +672,7 @@ src/curve.s: src/curve.c.s
 
 # target to generate assembly for a file
 src/curve.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/curve.c.s
 .PHONY : src/curve.c.s
 
 src/ease.o: src/ease.c.o
@@ -680,7 +680,7 @@ src/ease.o: src/ease.c.o
 
 # target to build an object file
 src/ease.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.o
 .PHONY : src/ease.c.o
 
 src/ease.i: src/ease.c.i
@@ -688,7 +688,7 @@ src/ease.i: src/ease.c.i
 
 # target to preprocess a source file
 src/ease.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.i
 .PHONY : src/ease.c.i
 
 src/ease.s: src/ease.c.s
@@ -696,7 +696,7 @@ src/ease.s: src/ease.c.s
 
 # target to generate assembly for a file
 src/ease.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ease.c.s
 .PHONY : src/ease.c.s
 
 src/euler.o: src/euler.c.o
@@ -704,7 +704,7 @@ src/euler.o: src/euler.c.o
 
 # target to build an object file
 src/euler.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.o
 .PHONY : src/euler.c.o
 
 src/euler.i: src/euler.c.i
@@ -712,7 +712,7 @@ src/euler.i: src/euler.c.i
 
 # target to preprocess a source file
 src/euler.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.i
 .PHONY : src/euler.c.i
 
 src/euler.s: src/euler.c.s
@@ -720,7 +720,7 @@ src/euler.s: src/euler.c.s
 
 # target to generate assembly for a file
 src/euler.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/euler.c.s
 .PHONY : src/euler.c.s
 
 src/frustum.o: src/frustum.c.o
@@ -728,7 +728,7 @@ src/frustum.o: src/frustum.c.o
 
 # target to build an object file
 src/frustum.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.o
 .PHONY : src/frustum.c.o
 
 src/frustum.i: src/frustum.c.i
@@ -736,7 +736,7 @@ src/frustum.i: src/frustum.c.i
 
 # target to preprocess a source file
 src/frustum.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.i
 .PHONY : src/frustum.c.i
 
 src/frustum.s: src/frustum.c.s
@@ -744,7 +744,7 @@ src/frustum.s: src/frustum.c.s
 
 # target to generate assembly for a file
 src/frustum.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/frustum.c.s
 .PHONY : src/frustum.c.s
 
 src/io.o: src/io.c.o
@@ -752,7 +752,7 @@ src/io.o: src/io.c.o
 
 # target to build an object file
 src/io.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.o
 .PHONY : src/io.c.o
 
 src/io.i: src/io.c.i
@@ -760,7 +760,7 @@ src/io.i: src/io.c.i
 
 # target to preprocess a source file
 src/io.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.i
 .PHONY : src/io.c.i
 
 src/io.s: src/io.c.s
@@ -768,7 +768,7 @@ src/io.s: src/io.c.s
 
 # target to generate assembly for a file
 src/io.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/io.c.s
 .PHONY : src/io.c.s
 
 src/ivec2.o: src/ivec2.c.o
@@ -776,7 +776,7 @@ src/ivec2.o: src/ivec2.c.o
 
 # target to build an object file
 src/ivec2.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.o
 .PHONY : src/ivec2.c.o
 
 src/ivec2.i: src/ivec2.c.i
@@ -784,7 +784,7 @@ src/ivec2.i: src/ivec2.c.i
 
 # target to preprocess a source file
 src/ivec2.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.i
 .PHONY : src/ivec2.c.i
 
 src/ivec2.s: src/ivec2.c.s
@@ -792,7 +792,7 @@ src/ivec2.s: src/ivec2.c.s
 
 # target to generate assembly for a file
 src/ivec2.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec2.c.s
 .PHONY : src/ivec2.c.s
 
 src/ivec3.o: src/ivec3.c.o
@@ -800,7 +800,7 @@ src/ivec3.o: src/ivec3.c.o
 
 # target to build an object file
 src/ivec3.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.o
 .PHONY : src/ivec3.c.o
 
 src/ivec3.i: src/ivec3.c.i
@@ -808,7 +808,7 @@ src/ivec3.i: src/ivec3.c.i
 
 # target to preprocess a source file
 src/ivec3.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.i
 .PHONY : src/ivec3.c.i
 
 src/ivec3.s: src/ivec3.c.s
@@ -816,7 +816,7 @@ src/ivec3.s: src/ivec3.c.s
 
 # target to generate assembly for a file
 src/ivec3.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec3.c.s
 .PHONY : src/ivec3.c.s
 
 src/ivec4.o: src/ivec4.c.o
@@ -824,7 +824,7 @@ src/ivec4.o: src/ivec4.c.o
 
 # target to build an object file
 src/ivec4.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.o
 .PHONY : src/ivec4.c.o
 
 src/ivec4.i: src/ivec4.c.i
@@ -832,7 +832,7 @@ src/ivec4.i: src/ivec4.c.i
 
 # target to preprocess a source file
 src/ivec4.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.i
 .PHONY : src/ivec4.c.i
 
 src/ivec4.s: src/ivec4.c.s
@@ -840,7 +840,7 @@ src/ivec4.s: src/ivec4.c.s
 
 # target to generate assembly for a file
 src/ivec4.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ivec4.c.s
 .PHONY : src/ivec4.c.s
 
 src/mat2.o: src/mat2.c.o
@@ -848,7 +848,7 @@ src/mat2.o: src/mat2.c.o
 
 # target to build an object file
 src/mat2.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.o
 .PHONY : src/mat2.c.o
 
 src/mat2.i: src/mat2.c.i
@@ -856,7 +856,7 @@ src/mat2.i: src/mat2.c.i
 
 # target to preprocess a source file
 src/mat2.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.i
 .PHONY : src/mat2.c.i
 
 src/mat2.s: src/mat2.c.s
@@ -864,7 +864,7 @@ src/mat2.s: src/mat2.c.s
 
 # target to generate assembly for a file
 src/mat2.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2.c.s
 .PHONY : src/mat2.c.s
 
 src/mat2x3.o: src/mat2x3.c.o
@@ -872,7 +872,7 @@ src/mat2x3.o: src/mat2x3.c.o
 
 # target to build an object file
 src/mat2x3.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.o
 .PHONY : src/mat2x3.c.o
 
 src/mat2x3.i: src/mat2x3.c.i
@@ -880,7 +880,7 @@ src/mat2x3.i: src/mat2x3.c.i
 
 # target to preprocess a source file
 src/mat2x3.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.i
 .PHONY : src/mat2x3.c.i
 
 src/mat2x3.s: src/mat2x3.c.s
@@ -888,7 +888,7 @@ src/mat2x3.s: src/mat2x3.c.s
 
 # target to generate assembly for a file
 src/mat2x3.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.s
 .PHONY : src/mat2x3.c.s
 
 src/mat2x4.o: src/mat2x4.c.o
@@ -896,7 +896,7 @@ src/mat2x4.o: src/mat2x4.c.o
 
 # target to build an object file
 src/mat2x4.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.o
 .PHONY : src/mat2x4.c.o
 
 src/mat2x4.i: src/mat2x4.c.i
@@ -904,7 +904,7 @@ src/mat2x4.i: src/mat2x4.c.i
 
 # target to preprocess a source file
 src/mat2x4.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.i
 .PHONY : src/mat2x4.c.i
 
 src/mat2x4.s: src/mat2x4.c.s
@@ -912,7 +912,7 @@ src/mat2x4.s: src/mat2x4.c.s
 
 # target to generate assembly for a file
 src/mat2x4.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.s
 .PHONY : src/mat2x4.c.s
 
 src/mat3.o: src/mat3.c.o
@@ -920,7 +920,7 @@ src/mat3.o: src/mat3.c.o
 
 # target to build an object file
 src/mat3.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.o
 .PHONY : src/mat3.c.o
 
 src/mat3.i: src/mat3.c.i
@@ -928,7 +928,7 @@ src/mat3.i: src/mat3.c.i
 
 # target to preprocess a source file
 src/mat3.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.i
 .PHONY : src/mat3.c.i
 
 src/mat3.s: src/mat3.c.s
@@ -936,7 +936,7 @@ src/mat3.s: src/mat3.c.s
 
 # target to generate assembly for a file
 src/mat3.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3.c.s
 .PHONY : src/mat3.c.s
 
 src/mat3x2.o: src/mat3x2.c.o
@@ -944,7 +944,7 @@ src/mat3x2.o: src/mat3x2.c.o
 
 # target to build an object file
 src/mat3x2.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.o
 .PHONY : src/mat3x2.c.o
 
 src/mat3x2.i: src/mat3x2.c.i
@@ -952,7 +952,7 @@ src/mat3x2.i: src/mat3x2.c.i
 
 # target to preprocess a source file
 src/mat3x2.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.i
 .PHONY : src/mat3x2.c.i
 
 src/mat3x2.s: src/mat3x2.c.s
@@ -960,7 +960,7 @@ src/mat3x2.s: src/mat3x2.c.s
 
 # target to generate assembly for a file
 src/mat3x2.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.s
 .PHONY : src/mat3x2.c.s
 
 src/mat3x4.o: src/mat3x4.c.o
@@ -968,7 +968,7 @@ src/mat3x4.o: src/mat3x4.c.o
 
 # target to build an object file
 src/mat3x4.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.o
 .PHONY : src/mat3x4.c.o
 
 src/mat3x4.i: src/mat3x4.c.i
@@ -976,7 +976,7 @@ src/mat3x4.i: src/mat3x4.c.i
 
 # target to preprocess a source file
 src/mat3x4.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.i
 .PHONY : src/mat3x4.c.i
 
 src/mat3x4.s: src/mat3x4.c.s
@@ -984,7 +984,7 @@ src/mat3x4.s: src/mat3x4.c.s
 
 # target to generate assembly for a file
 src/mat3x4.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.s
 .PHONY : src/mat3x4.c.s
 
 src/mat4.o: src/mat4.c.o
@@ -992,7 +992,7 @@ src/mat4.o: src/mat4.c.o
 
 # target to build an object file
 src/mat4.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.o
 .PHONY : src/mat4.c.o
 
 src/mat4.i: src/mat4.c.i
@@ -1000,7 +1000,7 @@ src/mat4.i: src/mat4.c.i
 
 # target to preprocess a source file
 src/mat4.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.i
 .PHONY : src/mat4.c.i
 
 src/mat4.s: src/mat4.c.s
@@ -1008,7 +1008,7 @@ src/mat4.s: src/mat4.c.s
 
 # target to generate assembly for a file
 src/mat4.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4.c.s
 .PHONY : src/mat4.c.s
 
 src/mat4x2.o: src/mat4x2.c.o
@@ -1016,7 +1016,7 @@ src/mat4x2.o: src/mat4x2.c.o
 
 # target to build an object file
 src/mat4x2.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.o
 .PHONY : src/mat4x2.c.o
 
 src/mat4x2.i: src/mat4x2.c.i
@@ -1024,7 +1024,7 @@ src/mat4x2.i: src/mat4x2.c.i
 
 # target to preprocess a source file
 src/mat4x2.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.i
 .PHONY : src/mat4x2.c.i
 
 src/mat4x2.s: src/mat4x2.c.s
@@ -1032,7 +1032,7 @@ src/mat4x2.s: src/mat4x2.c.s
 
 # target to generate assembly for a file
 src/mat4x2.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.s
 .PHONY : src/mat4x2.c.s
 
 src/mat4x3.o: src/mat4x3.c.o
@@ -1040,7 +1040,7 @@ src/mat4x3.o: src/mat4x3.c.o
 
 # target to build an object file
 src/mat4x3.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.o
 .PHONY : src/mat4x3.c.o
 
 src/mat4x3.i: src/mat4x3.c.i
@@ -1048,7 +1048,7 @@ src/mat4x3.i: src/mat4x3.c.i
 
 # target to preprocess a source file
 src/mat4x3.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.i
 .PHONY : src/mat4x3.c.i
 
 src/mat4x3.s: src/mat4x3.c.s
@@ -1056,7 +1056,7 @@ src/mat4x3.s: src/mat4x3.c.s
 
 # target to generate assembly for a file
 src/mat4x3.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.s
 .PHONY : src/mat4x3.c.s
 
 src/plane.o: src/plane.c.o
@@ -1064,7 +1064,7 @@ src/plane.o: src/plane.c.o
 
 # target to build an object file
 src/plane.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.o
 .PHONY : src/plane.c.o
 
 src/plane.i: src/plane.c.i
@@ -1072,7 +1072,7 @@ src/plane.i: src/plane.c.i
 
 # target to preprocess a source file
 src/plane.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.i
 .PHONY : src/plane.c.i
 
 src/plane.s: src/plane.c.s
@@ -1080,7 +1080,7 @@ src/plane.s: src/plane.c.s
 
 # target to generate assembly for a file
 src/plane.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/plane.c.s
 .PHONY : src/plane.c.s
 
 src/project.o: src/project.c.o
@@ -1088,7 +1088,7 @@ src/project.o: src/project.c.o
 
 # target to build an object file
 src/project.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.o
 .PHONY : src/project.c.o
 
 src/project.i: src/project.c.i
@@ -1096,7 +1096,7 @@ src/project.i: src/project.c.i
 
 # target to preprocess a source file
 src/project.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.i
 .PHONY : src/project.c.i
 
 src/project.s: src/project.c.s
@@ -1104,7 +1104,7 @@ src/project.s: src/project.c.s
 
 # target to generate assembly for a file
 src/project.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/project.c.s
 .PHONY : src/project.c.s
 
 src/quat.o: src/quat.c.o
@@ -1112,7 +1112,7 @@ src/quat.o: src/quat.c.o
 
 # target to build an object file
 src/quat.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.o
 .PHONY : src/quat.c.o
 
 src/quat.i: src/quat.c.i
@@ -1120,7 +1120,7 @@ src/quat.i: src/quat.c.i
 
 # target to preprocess a source file
 src/quat.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.i
 .PHONY : src/quat.c.i
 
 src/quat.s: src/quat.c.s
@@ -1128,7 +1128,7 @@ src/quat.s: src/quat.c.s
 
 # target to generate assembly for a file
 src/quat.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/quat.c.s
 .PHONY : src/quat.c.s
 
 src/ray.o: src/ray.c.o
@@ -1136,7 +1136,7 @@ src/ray.o: src/ray.c.o
 
 # target to build an object file
 src/ray.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.o
 .PHONY : src/ray.c.o
 
 src/ray.i: src/ray.c.i
@@ -1144,7 +1144,7 @@ src/ray.i: src/ray.c.i
 
 # target to preprocess a source file
 src/ray.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.i
 .PHONY : src/ray.c.i
 
 src/ray.s: src/ray.c.s
@@ -1152,7 +1152,7 @@ src/ray.s: src/ray.c.s
 
 # target to generate assembly for a file
 src/ray.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/ray.c.s
 .PHONY : src/ray.c.s
 
 src/sphere.o: src/sphere.c.o
@@ -1160,7 +1160,7 @@ src/sphere.o: src/sphere.c.o
 
 # target to build an object file
 src/sphere.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.o
 .PHONY : src/sphere.c.o
 
 src/sphere.i: src/sphere.c.i
@@ -1168,7 +1168,7 @@ src/sphere.i: src/sphere.c.i
 
 # target to preprocess a source file
 src/sphere.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.i
 .PHONY : src/sphere.c.i
 
 src/sphere.s: src/sphere.c.s
@@ -1176,7 +1176,7 @@ src/sphere.s: src/sphere.c.s
 
 # target to generate assembly for a file
 src/sphere.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/sphere.c.s
 .PHONY : src/sphere.c.s
 
 src/vec2.o: src/vec2.c.o
@@ -1184,7 +1184,7 @@ src/vec2.o: src/vec2.c.o
 
 # target to build an object file
 src/vec2.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.o
 .PHONY : src/vec2.c.o
 
 src/vec2.i: src/vec2.c.i
@@ -1192,7 +1192,7 @@ src/vec2.i: src/vec2.c.i
 
 # target to preprocess a source file
 src/vec2.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.i
 .PHONY : src/vec2.c.i
 
 src/vec2.s: src/vec2.c.s
@@ -1200,7 +1200,7 @@ src/vec2.s: src/vec2.c.s
 
 # target to generate assembly for a file
 src/vec2.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec2.c.s
 .PHONY : src/vec2.c.s
 
 src/vec3.o: src/vec3.c.o
@@ -1208,7 +1208,7 @@ src/vec3.o: src/vec3.c.o
 
 # target to build an object file
 src/vec3.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.o
 .PHONY : src/vec3.c.o
 
 src/vec3.i: src/vec3.c.i
@@ -1216,7 +1216,7 @@ src/vec3.i: src/vec3.c.i
 
 # target to preprocess a source file
 src/vec3.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.i
 .PHONY : src/vec3.c.i
 
 src/vec3.s: src/vec3.c.s
@@ -1224,7 +1224,7 @@ src/vec3.s: src/vec3.c.s
 
 # target to generate assembly for a file
 src/vec3.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec3.c.s
 .PHONY : src/vec3.c.s
 
 src/vec4.o: src/vec4.c.o
@@ -1232,7 +1232,7 @@ src/vec4.o: src/vec4.c.o
 
 # target to build an object file
 src/vec4.c.o:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.o
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.o
 .PHONY : src/vec4.c.o
 
 src/vec4.i: src/vec4.c.i
@@ -1240,7 +1240,7 @@ src/vec4.i: src/vec4.c.i
 
 # target to preprocess a source file
 src/vec4.c.i:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.i
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.i
 .PHONY : src/vec4.c.i
 
 src/vec4.s: src/vec4.c.s
@@ -1248,7 +1248,7 @@ src/vec4.s: src/vec4.c.s
 
 # target to generate assembly for a file
 src/vec4.c.s:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.s
+	cd /home/voidlich/personal/Snake/build && $(MAKE) $(MAKESILENT) -f lib/cglm/CMakeFiles/cglm.dir/build.make lib/cglm/CMakeFiles/cglm.dir/src/vec4.c.s
 .PHONY : src/vec4.c.s
 
 # Help Target
@@ -1409,6 +1409,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/stanleya1293/Desktop/Projects/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/voidlich/personal/Snake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

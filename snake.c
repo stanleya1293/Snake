@@ -10,14 +10,14 @@ typedef enum {
 	SNAKE_LEFT	
 } Direction;
 
-const float quad_vertices[] = {
+float quad_vertices[] = {
 	-0.5f, -0.5f, 0.0f,
 	-0.5f,  0.5f, 0.0f,
 	 0.5f,  0.5f, 0.0f,
 	 0.5f, -0.5f, 0.0f
 };
 
-const unsigned int quad_elements[] = {
+unsigned int quad_elements[] = {
 	0, 1, 2,
 	0, 2, 3
 }; 
@@ -68,10 +68,11 @@ int main(int argc, char* argv[]) {
 	const char* f_shader_src = 
 		"#version 330 core\n"
 		"out vec4 FragColor;\n"
+		"uniform vec4 color\n"
 		"\n"
 		"void main()\n"
 		"{\n"
-		"FragColor = vec4(0.0, 1.0, 0.0, 1.0);\n"
+		"FragColor = color;\n"
 		"}\0";
 	
 	v_shader = glCreateShader(GL_VERTEX_SHADER);
@@ -132,38 +133,57 @@ int main(int argc, char* argv[]) {
 
 	mat4 snake_translate;
 	mat4 snake_scale;
+	glm_mat4_identity(snake_translate);
 	glm_mat4_identity(snake_scale);
 	glm_scale(snake_scale, (vec3) {0.1f, 0.1f, 0.1f});
 	mat4 snake_transform;
 	GLint transform_location = glGetUniformLocation(shader_program, "transform");
+	GLint color_location = glGetUniformLocation(shader_program, "color");
+	vec4 snake_color = {0.0f, 1.0f, 0.0f, 1.0f};
 
+	mat4 apple_translate;
+	mat4 apple_scale;
+	glm_mat4_identity(apple_translate);
+	glm_mat4_identity(apple_scale);
+	glm_scale(apple_scale, (vec3) {0.1f, 0.1f, 0.f});
+	glm_translate(apple_translate, (vec3) {0.5f, 0.3f, 0.0f});
+	mat4 apple_transform;
+	vec4 apple_color = {1.0f, 0.0f, 0.0f, 1.0f};
+	
 	glfwSetKeyCallback(window, key_callback);
-	Direction previous_direction;
+
+	double current_seconds =  glfwGetTime();
 	while (!glfwWindowShouldClose(window)) {
         	glClear(GL_COLOR_BUFFER_BIT);
-		if (previous_direction != snake_direction) {
-			glm_mat4_identity(snake_translate);
+		if (glfwGetTime() >= current_seconds + 0.15) {
+			current_seconds = glfwGetTime();
+			switch (snake_direction) {
+				case SNAKE_UP:
+					glm_translate(snake_translate, (vec3) {0.0f, 0.10f, 0.0f});
+					break;
+				case SNAKE_DOWN:
+					glm_translate(snake_translate, (vec3) {0.0f, -0.10f, 0.0f});
+					break;
+				case SNAKE_RIGHT:
+					glm_translate(snake_translate, (vec3) {0.10f, 0.0f, 0.0f});
+					break;
+				case SNAKE_LEFT:
+					glm_translate(snake_translate, (vec3) {-0.10f, 0.0f, 0.0f});
+					break;
+				default:
+					break;
+			}
 		}
-		switch (snake_direction) {
-			case SNAKE_UP:
-				glm_translate(snake_translate, (vec3) {0.0f, 0.02f, 0.0f});
-				break;
-			case SNAKE_DOWN:
-				glm_translate(snake_translate, (vec3) {0.0f, -0.02f, 0.0f});
-				break;
-			case SNAKE_RIGHT:
-				glm_translate(snake_translate, (vec3) {0.02f, 0.0f, 0.0f});
-				break;
-			case SNAKE_LEFT:
-				glm_translate(snake_translate, (vec3) {-0.02f, 0.0f, 0.0f});
-				break;
-			default:
-				break;
-		}
-		previous_direction = snake_direction;
        		glm_mat4_mul(snake_translate, snake_scale, snake_transform);
 		glUniformMatrix4fv(transform_location, 1, GL_FALSE, snake_transform[0]);
+		glUniform4fv(color_location, 1, snake_color);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+
+		glm_mat4_mul(apple_translate, apple_scale, apple_transform);
+		glUniformMatrix4fv(transform_location, 1, GL_FALSE, apple_transform[0]);
+		glUniform4fv(color_location, 1, apple_color);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);	
         	glfwSwapBuffers(window);
         	glfwPollEvents();
     	}

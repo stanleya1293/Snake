@@ -1,31 +1,21 @@
 #include "renderer.h"
 
-Window CreateWindow(int width, int height, char* title) {
-	glfwInit();
-	Window window;
-	window.WIN_WIDTH = width;
-	window.WIN_HEIGHT = height;
-	window.WIN_TITLE = title;
-    	window.WIN_ID = glfwCreateWindow(window.WIN_WIDTH, window.WIN_HEIGHT, window.WIN_TITLE, NULL, NULL);
-	glfwMakeContextCurrent(window.WIN_ID);
-	return window;
-}
-
 Renderer CreateRenderer() {	
-	Renderer renderer;
+	Renderer new_renderer;
 	gladLoadGL();
 	
-	renderer.QUAD_VERTICES = {
-		-0.5f, -0.5f, 0.0f,
-		-0.5f,  0.5f, 0.0f,
-	 	 0.5f,  0.5f, 0.0f,
-		 0.5f, -0.5f, 0.0f
+	float vertices[] = {
+		-1.0f, -1.0f, 0.0f,
+		-1.0f,  1.0f, 0.0f,
+	 	 1.0f,  1.0f, 0.0f,
+		 1.0f, -1.0f, 0.0f
 	};
-
-	renderer.QUAD_INDICES = {
+	 
+	unsigned int indices[] = {
 		0, 1, 2,
 		0, 2, 3
 	}; 
+
 	unsigned int f_shader;
 	unsigned int v_shader;
 
@@ -71,28 +61,30 @@ Renderer CreateRenderer() {
 		printf("Fragment Shader Error: %s", f_infolog);
 	}
 	
-	renderer.SHADER_PROGRAM = glCreateProgram();
-	glAttachShader(renderer.SHADER_PROGRAM, v_shader);
-	glAttachShader(renderer.SHADER_PROGRAM, f_shader);
-	glLinkProgram(renderer.SHADER_PROGRAM);
+	new_renderer.shader_program = glCreateProgram();
+	glAttachShader(new_renderer.shader_program, v_shader);
+	glAttachShader(new_renderer.shader_program, f_shader);
+	glLinkProgram(new_renderer.shader_program);
 	
 	glDeleteShader(v_shader);
 	glDeleteShader(f_shader);
 
-	glGenVertexArrays(1, &renderer.VAO);
-	glBindVertexArray(renderer.VAO);
+	glGenVertexArrays(1, &new_renderer.vao);
+	glBindVertexArray(new_renderer.vao);
 
-	glGenBuffers(1, &renderer.VBO);
-	glBindBuffer(GL_ARRAY_BUFFER, renderer.VBO);
+	glGenBuffers(1, &new_renderer.vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, new_renderer.vbo);
 
-	glGenBuffers(1, &renderer.EBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer.EBO);
+	glGenBuffers(1, &new_renderer.ebo);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, new_renderer.ebo);
 	
-	glBufferData(GL_ARRAY_BUFFER, sizeof(renderer.QUAD_VERTICES), renderer.QUAD_VERTICES, GL_STATIC_DRAW);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(renderer.QUAD_INDICES), renderer.QUAD_INDICES, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 	
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*) 0);
 	
-	glUseProgram(shader_program);
+	glUseProgram(new_renderer.shader_program);
+	
+	return new_renderer;
 };

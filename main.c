@@ -1,8 +1,11 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <cglm/cglm.h>
 #include "renderer.h"
+
 
 
 typedef enum {
@@ -45,8 +48,8 @@ int main(int argc, char* argv[]) {
 	glfwSetWindowUserPointer(window, &snake_direction);
 
 	int snake_x, snake_y;
-	snake_x = 275;
-	snake_y = 275;
+	snake_x = 10;
+	snake_y = 10;
 	mat4 snake_translate;
 	mat4 snake_scale;
 	glm_mat4_identity(snake_translate);
@@ -59,8 +62,8 @@ int main(int argc, char* argv[]) {
 	vec4 snake_color = {0.0f, 1.0f, 0.0f, 1.0f};
 	
 	int apple_x, apple_y;
-	apple_x = (600 * 0.15) + 300;
-	apple_y = (600 * 0.35) + 300;
+	apple_x = 12;
+	apple_y = 14;
 	mat4 apple_translate;
 	mat4 apple_scale;
 	glm_mat4_identity(apple_translate);
@@ -69,9 +72,10 @@ int main(int argc, char* argv[]) {
 	glm_translate(apple_translate, (vec3) {0.15f, 0.35f, 0.0f});
 	mat4 apple_transform;
 	vec4 apple_color = {1.0f, 0.0f, 0.0f, 1.0f};
-	
-	glfwSetKeyCallback(window, key_callback);
 
+	glfwSetKeyCallback(window, key_callback);
+	int apple_prev_x;
+	int apple_prev_y;
 	double current_seconds =  glfwGetTime();
 	while (!glfwWindowShouldClose(window)) {
         	glClear(GL_COLOR_BUFFER_BIT);
@@ -80,26 +84,38 @@ int main(int argc, char* argv[]) {
 			switch (snake_direction) {
 				case SNAKE_UP:
 					glm_translate(snake_translate, (vec3) {0.0f, 0.10f, 0.0f});
-					snake_y = snake_y + 30;
+					snake_y = snake_y + 1;
 					break;
 				case SNAKE_DOWN:
 					glm_translate(snake_translate, (vec3) {0.0f, -0.10f, 0.0f});
-					snake_y = snake_y - 30; 
+					snake_y = snake_y - 1; 
 					break;
 				case SNAKE_RIGHT:
 					glm_translate(snake_translate, (vec3) {0.10f, 0.0f, 0.0f});
-					snake_x = snake_x + 30;
+					snake_x = snake_x + 1;
 					break;
 				case SNAKE_LEFT:
 					glm_translate(snake_translate, (vec3) {-0.10f, 0.0f, 0.0f});
-					snake_x = snake_x - 30;
+					snake_x = snake_x - 1;
 					break;
 				default:
 					break;
 			}
 		}
-		if (snake_x - 15 > 600 || snake_x + 15 < 0 || snake_y - 15 > 600 || snake_y + 15 < 0) {
+		if (snake_x == 21 || snake_x == 0 || snake_y == 21 || snake_y == 0) {
 			glfwSetWindowShouldClose(window, 1);
+		}
+		if (snake_x == apple_x && snake_y == apple_y) {
+			apple_prev_x = apple_x;
+			apple_prev_y = apple_y;
+			srand(time(NULL));
+			apple_x = (rand() % 20) + 1;
+			printf("apple_x: %d \n", apple_x);
+			srand(time(NULL) + 20);
+			apple_y = (rand() % 20) + 1;
+			printf("apple_y: %d \n", apple_y);
+			glm_translate(apple_translate, (vec3) {(float) ((apple_x - apple_prev_x) * 30) / 300, (float) ((apple_y - apple_prev_y) * 30) / 300, 0.0f});
+			
 		}
        		glm_mat4_mul(snake_translate, snake_scale, snake_transform);
 		glUniformMatrix4fv(transform_location, 1, GL_FALSE, snake_transform[0]);

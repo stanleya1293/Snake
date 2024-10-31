@@ -15,11 +15,11 @@ typedef enum {
 typedef struct snake {
 	struct snake* previous;
 	struct snake* next;
-	struct snake* head;
-	struct snake* tail;
 	Direction direction;
 	int x;
 	int y;
+	struct snake* head;
+	struct snake* tail;
 } Snake;
 
 Snake* Create_Snake();

@@ -8,8 +8,8 @@ Snake* Create_Snake() {
 	snake_head->direction = SNAKE_RIGHT;
 	snake_head->x = 10;
 	snake_head->y = 10;
-	snake_head->head = snake_head;
 	snake_head->tail = snake_head;
+	snake_head->head = snake_head;
 	return snake_head;	
 }
 
@@ -23,7 +23,6 @@ void Add_Snake(Snake* snake) {
 		new_snake->y = snake->y;
 		new_snake->direction = snake->direction;
 		new_snake->head = snake->head;
-		new_snake->tail = NULL;
 		new_snake->head->tail = new_snake;
 	}
 	else {
@@ -31,32 +30,30 @@ void Add_Snake(Snake* snake) {
 	}
 }
 
-void Update_Snake(Snake* snake) {	
-	if (snake->previous == NULL) {
-		switch (snake->direction) {
-			case SNAKE_UP:
-				snake->y = snake->y + 1;
-				break;
-			case SNAKE_DOWN:
-				snake->y = snake->y - 1;
-				break;
-			case SNAKE_RIGHT:
-				snake->x = snake->x + 1;
-				break;
-			case SNAKE_LEFT:
-				snake->x = snake->x - 1;
-				break;
-			default:
-				break;
-		}
+void Update_Snake(Snake* snake) {
+	Snake* snek = snake->tail;
+	while (snek->previous != NULL) {
+		snek->x = snek->previous->x;
+		snek->y = snek->previous->y;
+		snek->direction = snek->previous->direction;
+		snek = snek->previous;
 	}
-	else {
-		snake->x = snake->previous->x;
-		snake->y = snake->previous->y;
-		snake->direction = snake->previous->direction;
-		Update_Snake(snake);
+	switch (snake->direction) {
+		case SNAKE_UP:
+			snake->y = snake->y + 1;
+			break;
+		case SNAKE_DOWN:
+			snake->y = snake->y - 1;
+			break;
+		case SNAKE_RIGHT:
+			snake->x = snake->x + 1;
+			break;
+		case SNAKE_LEFT:
+			snake->x = snake->x - 1;
+			break;
+		default:
+			break;
 	}
-
 }
 
 void Draw_Snake(Snake* snake, Renderer renderer) {
@@ -64,8 +61,6 @@ void Draw_Snake(Snake* snake, Renderer renderer) {
 	mat4 snake_scale;
 	glm_mat4_identity(snake_translate);
 	glm_mat4_identity(snake_scale);
-	printf("Snake x: %d", snake->x);
-	printf("Snake y: %d", snake->y);
 	glm_translate(snake_translate, (vec3) 
 			{
 			-0.05 + (((float) snake->x - 10) / 10),

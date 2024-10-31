@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
         	glClear(GL_COLOR_BUFFER_BIT);
 		if (glfwGetTime() >= current_seconds + 0.15) {
 			current_seconds = glfwGetTime();
-			Update_Snake(snake->tail);
+			Update_Snake(snake);
 		}
 		if (snake->x == 21 || snake->x == 0 || snake->y == 21 || snake->y == 0) {
 			glfwSetWindowShouldClose(window, 1);

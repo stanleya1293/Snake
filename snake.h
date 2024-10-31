@@ -13,7 +13,10 @@ typedef enum {
 } Direction;
 
 typedef struct snake {
+	struct snake* previous;
 	struct snake* next;
+	struct snake* head;
+	struct snake* tail;
 	Direction direction;
 	int x;
 	int y;
@@ -22,6 +25,8 @@ typedef struct snake {
 Snake* Create_Snake();
 
 void Add_Snake(Snake* snake);
+
+void Update_Snake(Snake* snake);
 
 void Draw_Snake(Snake* snake, Renderer renderer);
 

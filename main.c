@@ -61,22 +61,7 @@ int main(int argc, char* argv[]) {
         	glClear(GL_COLOR_BUFFER_BIT);
 		if (glfwGetTime() >= current_seconds + 0.15) {
 			current_seconds = glfwGetTime();
-			switch (snake->direction) {
-				case SNAKE_UP:
-					snake->y = snake->y + 1;
-					break;
-				case SNAKE_DOWN:
-					snake->y = snake->y - 1; 
-					break;
-				case SNAKE_RIGHT:
-					snake->x = snake->x + 1;
-					break;
-				case SNAKE_LEFT:
-					snake->x = snake->x - 1;
-					break;
-				default:
-					break;
-			}
+			Update_Snake(snake->tail);
 		}
 		if (snake->x == 21 || snake->x == 0 || snake->y == 21 || snake->y == 0) {
 			glfwSetWindowShouldClose(window, 1);
@@ -93,6 +78,7 @@ int main(int argc, char* argv[]) {
 			glm_translate(apple_translate, (vec3) 
 					{(float) ((apple_x - apple_prev_x) * 30) / 300, 
 					(float) ((apple_y - apple_prev_y) * 30) / 300, 0.0f});
+			Add_Snake(snake);
 			
 		}
        		Draw_Snake(snake, renderer);

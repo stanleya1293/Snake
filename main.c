@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
 			current_seconds = glfwGetTime();
 			Update_Snake(snake);
 		}
-		if (snake->x == 21 || snake->x == 0 || snake->y == 21 || snake->y == 0) {
+		if (snake->x == 21 || snake->x == 0 || snake->y == 21 || snake->y == 0 || Check_Snake_Collision(snake)) {
 			glfwSetWindowShouldClose(window, 1);
 		}
 		if (snake->x == apple_x && snake->y == apple_y) {

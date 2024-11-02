@@ -30,6 +30,7 @@ void Update_Snake(Snake* snake);
 
 void Draw_Snake(Snake* snake, Renderer renderer);
 
+bool Check_Snake_Collision(Snake* snake);
 
 
 #endif

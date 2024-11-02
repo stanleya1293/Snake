@@ -30,6 +30,18 @@ void Add_Snake(Snake* snake) {
 	}
 }
 
+bool Check_Snake_Collision(Snake* snake) {
+	Snake* current_snake = snake->tail;
+	while (current_snake != snake->next) {
+		if (snake->x == current_snake->x && snake->y == current_snake->y) {
+			return true;	
+		}
+		current_snake = current_snake->previous; 
+	}
+	return false;
+	
+}
+
 void Update_Snake(Snake* snake) {
 	Snake* snek = snake->tail;
 	while (snek->previous != NULL) {

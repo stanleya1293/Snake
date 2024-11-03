@@ -71,10 +71,8 @@ int main(int argc, char* argv[]) {
 			apple_prev_y = apple_y;
 			srand(time(NULL));
 			apple_x = (rand() % 20) + 1;
-			printf("apple_x: %d \n", apple_x);
 			srand(time(NULL) + 20);
 			apple_y = (rand() % 20) + 1;
-			printf("apple_y: %d \n", apple_y);
 			glm_translate(apple_translate, (vec3) 
 					{(float) ((apple_x - apple_prev_x) * 30) / 300, 
 					(float) ((apple_y - apple_prev_y) * 30) / 300, 0.0f});

@@ -32,7 +32,7 @@ void Add_Snake(Snake* snake) {
 
 bool Check_Snake_Collision(Snake* snake) {
 	Snake* current_snake = snake->tail;
-	while (current_snake != snake->next) {
+	while (current_snake != snake && current_snake != snake->next) {
 		if (snake->x == current_snake->x && snake->y == current_snake->y) {
 			return true;	
 		}

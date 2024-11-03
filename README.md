@@ -1,7 +1,7 @@
 # To Run:
 Use the following commands:
 ```
-git clone https://stanleya1293/Snake
+git clone https://github.com/stanleya1293/Snake.git
 cd Snake
 make
 ```
